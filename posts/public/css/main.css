@@ -1,0 +1,11 @@
+.navbar { border-radius:0; }
+.form-control.ng-dirty.ng-invalid {
+  border: 1px solid red;
+}
+.form-control.ng-dirty.ng-valid {
+  border: 1px solid green;
+}
+
+.action i:hover {
+  cursor: pointer;
+}

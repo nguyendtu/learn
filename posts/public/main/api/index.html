@@ -1,0 +1,83 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Endpoint</th>
+      <th>Method</th>
+      <th>Example</th>
+      <th>Sample Response</th>
+      <th>Desciption</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>/posts</td>
+      <td>GET</td>
+      <td>http://localhost:8001/posts</td>
+      <td>
+        <pre>
+[
+  { id: 1, title: 'Hi!', categories: 'Computer, Friends' },
+  { id: 2, title: 'New Post', categories: 'Candy' }
+]
+        </pre>
+      </td>
+      <td>
+        Fetches the 40 most recent posts in the database. This endpoint does not return the posts content, only the title, id, and categories. Note this list is occasionally cleaned out.
+      </td>
+    </tr>
+    <tr>
+      <td>/posts</td>
+      <td>POST</td>
+      <td>http://localhost:8001/posts</td>
+      <td>
+        <pre>
+{
+  id: 1,
+  title: 'Hi!',
+  categories: 'Computer, Friends',
+  content: 'Blog post content'
+}
+        </pre>
+      </td>
+      <td>
+        Creates a new blog post entry. Returns the created blog post with the ID
+      </td>
+    </tr>
+    <tr>
+      <td>/posts/:id</td>
+      <td>GET</td>
+      <td>http://localhost:8001/posts/:id</td>
+      <td>
+        <pre>
+{
+  id: 1,
+  title: 'Hi!',
+  categories: 'Computer, Friends',
+  content: 'Blog post content'
+}
+        </pre>
+      </td>
+      <td>
+        Fetches a single blog post with the given ID. Includes the blog's content.
+      </td>
+    </tr>
+    <tr>
+      <td>/posts/:id</td>
+      <td>DELETE</td>
+      <td>http://localhost:8001/posts/:id</td>
+      <td>
+        <pre>
+{
+  id: 1,
+  title: 'Hi!',
+  categories: 'Computer, Friends',
+  content: 'Blog post content'
+}
+        </pre>
+      </td>
+      <td>
+        Deletes a single blog post with the given ID. Returns the post.
+      </td>
+    </tr>
+  </tbody>
+</table>

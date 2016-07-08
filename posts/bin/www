@@ -1,0 +1,13 @@
+var app = require('../app')
+var models = require('../models')
+
+app.set('port', process.env.PORT || 8001)
+
+console.log(app.get('port'))
+
+models.sequelize.sync().then(() => {
+  var server = app.listen(app.get('port'), () => {
+    console.log('Server start')
+  })
+})
+

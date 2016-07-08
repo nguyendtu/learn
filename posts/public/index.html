@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<title>Posts</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/ain.css">
+
+    <script src="https://use.fontawesome.com/36282c4f63.js"></script>
+    <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    <script src="main.js"></script>
+    <script src="routes.js"></script>
+    <script src="javascripts/controllers/PostsController.js"></script>
+    <script src="javascripts/controllers/PostsCRUDController.js"></script>
+    <script src="javascripts/controllers/GuiController.js"></script>
+    <script src="javascripts/controllers/ErrController.js"></script>
+    <script src="javascripts/services/PostsService.js"></script>
+	</head>
+	<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" ui-sref="home">App brand</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li>
+              <a ui-sref="home">
+                <i class="fa fa-home"></i>
+                Home
+              </a>
+            </li>
+            <li>
+              <a ui-sref="api">
+                <i class="fa fa-cogs"></i>
+                API
+              </a>
+            </li>
+            <li>
+              <a ui-sref="gui">
+                <i class="fa fa-laptop"></i>
+                GUI
+              </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+
+        <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+        <div ui-view></div>
+
+    </div>
+	</body>
+</html>
+
